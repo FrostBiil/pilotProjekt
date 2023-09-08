@@ -5,37 +5,30 @@ using UnityEngine.UIElements;
 
 public class entity : MonoBehaviour
 {
-    private Vector2 m_vel;
-    private bool m_isHarmful;
-
-    Rigidbody2D body;
-
-    // Start is called before the first frame update
-    void Start()
+    public bool isHarmful = false;
+    //public CircleCollider2D cC;
+    [SerializeField] private Vector2 _vel = new Vector2(0, 1);
+    [SerializeField] private Rigidbody2D rb;
+    //[SerializeField] private List<string> _posList = new List<string> { "left", "center", "right" };
+    //[SerializeField] private string[] _pos;
+    private void Start()
     {
-        body = GetComponent<Rigidbody2D>();
+        rb.velocity = _vel;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
+    {
+        //rb.velocity = _vel;   
+    }
+
+    /*private void OnTriggerEnter(Collider other)
     {
         Movement();   
-    }
+    } */
 
-    private void Movement()
+    public void Die()
     {
-
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        
-    }
-
-
-    private void Die()
-    {
-        
+        Destroy(gameObject);
     }
 
 }
