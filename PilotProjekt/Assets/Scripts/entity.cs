@@ -11,7 +11,6 @@ public class entity : MonoBehaviour
     [SerializeField] private Rigidbody2D rb;
     //[SerializeField] private List<string> _posList = new List<string> { "left", "center", "right" };
     //[SerializeField] private string[] _pos;
-
     private void Start()
     {
         rb.velocity = _vel;
@@ -24,9 +23,8 @@ public class entity : MonoBehaviour
 
     /*private void OnTriggerEnter(Collider other)
     {
-        
-    }*/
-
+        Movement();   
+    } */
 
     public void Die()
     {
