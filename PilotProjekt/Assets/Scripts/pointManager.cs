@@ -4,15 +4,18 @@ using UnityEngine;
 
 public class pointManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+
+    public int storedPoints = 0;
+    public int safePoints = 0;
+
+
+    public void add(int point)
     {
-        
+        storedPoints += point;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void savePoints()
     {
-        
+        safePoints += storedPoints;
     }
 }
