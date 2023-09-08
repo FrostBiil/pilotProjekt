@@ -19,3 +19,4 @@ public class pointManager : MonoBehaviour
         safePoints += storedPoints;
     }
 }
+
