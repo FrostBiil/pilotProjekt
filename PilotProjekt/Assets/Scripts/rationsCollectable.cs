@@ -35,7 +35,13 @@ public class rationsCollectable : MonoBehaviour
 
         if (collision.CompareTag("Player"))
         {
+            Debug.Log("Points added: " + pointValue);
             //pM.add(pointValue);
+            Die();
+        }
+
+        if (collision.CompareTag("Destroy"))
+        {
             Die();
         }
     }

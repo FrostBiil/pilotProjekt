@@ -2,31 +2,29 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class waterCollectable : MonoBehaviour
+public class dropZoneCollectable : MonoBehaviour
 {
     public bool isHarmful = false;
     [SerializeField] private Vector2 _vel = new Vector2(0, 1);
-    [SerializeField] private Rigidbody2D _rb;
-    [SerializeField] private GameObject _pM;
-
-    [SerializeField] private int _pointValue = 3;
+    [SerializeField] private Rigidbody2D rb;
+    [SerializeField] private GameObject pM;
 
     private void Awake()
     {
-        _rb = GetComponent<Rigidbody2D>();
+        rb = GetComponent<Rigidbody2D>();
     }
 
 
     // Start is called before the first frame update
     void Start()
     {
-        _rb.velocity = _vel;
+        rb.velocity = _vel;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -35,8 +33,8 @@ public class waterCollectable : MonoBehaviour
 
         if (collision.CompareTag("Player"))
         {
-            Debug.Log("Points added: " + _pointValue);
-            //pM.add(3);
+            Debug.Log("Points are now safe");
+            //pM.savePoints();
             Die();
         }
 
