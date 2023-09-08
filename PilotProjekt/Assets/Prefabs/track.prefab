@@ -1,0 +1,76 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8719532300337880654
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8117325515966535825}
+  - component: {fileID: 5192128894378086297}
+  - component: {fileID: 3266386070616796984}
+  m_Layer: 5
+  m_Name: track
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &8117325515966535825
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8719532300337880654}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -156, y: 199}
+  m_SizeDelta: {x: 129.8309, y: 135.578}
+  m_Pivot: {x: 0.5000001, y: 0.49999997}
+--- !u!114 &5192128894378086297
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8719532300337880654}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff230e19ade82e947b7a73d9f3bffa9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _pos: {x: 0, y: 1}
+  width: 33
+  count: 1
+  obs_placeholder: {fileID: 1659279669352259875, guid: 4b7ab2699ef59fb489a13d55e80cdd03, type: 3}
+  col1_placeholder: {fileID: 950730070327941499, guid: 519ea95c2b935cf4ea4fe91362f2a454, type: 3}
+  col2_placeholder: {fileID: 950730070327941499, guid: 77635e9255d2a374a937587445da87be, type: 3}
+--- !u!114 &3266386070616796984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8719532300337880654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd2c5be5a1453384892cd83cd10f87ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _pos: {x: 0, y: 1}
+  width: 0
+  count: 0
+  canvas: {fileID: 0}
+  obs_placeholder: {fileID: 950730070327941499, guid: 77635e9255d2a374a937587445da87be, type: 3}
+  col1_placeholder: {fileID: 3532088545736774678, guid: ac659b803bfd5784898d662488106dc8, type: 3}
+  col2_placeholder: {fileID: 3532088545736774678, guid: 262c173f2924e384a81d761f52ea54ba, type: 3}

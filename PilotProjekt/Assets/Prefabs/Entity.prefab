@@ -110,7 +110,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isHarmful: 0
-  _vel: {x: 0, y: 1}
+  _vel: {x: 0, y: 0}
   rb: {fileID: 7845338513760059666}
 --- !u!1 &4982294496298886997
 GameObject:

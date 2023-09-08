@@ -18,7 +18,7 @@ public class entity : MonoBehaviour
 
     private void Update()
     {
-        //rb.velocity = _vel;   
+        rb.velocity = _vel;   
     }
 
     /*private void OnTriggerEnter(Collider other)
