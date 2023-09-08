@@ -5,10 +5,8 @@ using UnityEngine.UIElements;
 
 public class entity : MonoBehaviour
 {
-    private Vector2 m_Position;
-    private Vector2 m_Direction;
+    private Vector2 m_vel;
     private bool m_isHarmful;
-    private int m_Speed;
 
     Rigidbody2D body;
 
@@ -21,7 +19,7 @@ public class entity : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        Movement();   
     }
 
     private void Movement()
