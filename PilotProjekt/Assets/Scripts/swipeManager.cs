@@ -4,30 +4,33 @@ using UnityEngine;
 
 public class swipeManager : MonoBehaviour
 {
-    [SerializeField] private GameObject currentTrack;
-    [SerializeField] private GameObject tracksObject;
+    [SerializeField] 
+    private GameObject currentTrack, tracksObject, player;
     public List<GameObject> tracks = new List<GameObject>();
     
-    private int _trackNumber;
+    private int trackNumber;
+
+    private float switchSpeed = 1000.0f;
+
     public int TrackNumber
     {
         get
         {
-            return this._trackNumber;
+            return this.trackNumber;
         }
         set
         {
             if (value < 0)
             {
-                this._trackNumber = 0;
+                this.trackNumber = 0;
             }
             else if (value >= tracks.Count)
             {
-                this._trackNumber = tracks.Count - 1;
+                this.trackNumber = tracks.Count - 1;
             }
             else
             {
-                this._trackNumber = value;
+                this.trackNumber = value;
             }
         }
     }
@@ -67,6 +70,7 @@ public class swipeManager : MonoBehaviour
                 PreviousTrack();
             }
         }
+        MovePlayer();
     }
 
     void NextTrack()
@@ -81,5 +85,31 @@ public class swipeManager : MonoBehaviour
         //Debug.Log("PreviousTrack");
         TrackNumber--;
         currentTrack = tracks[TrackNumber];
+    }
+
+    void MovePlayer()
+    {
+        float trackX = currentTrack.transform.position.x, playerX = player.transform.position.x;
+        if(playerX != trackX)
+        {
+            //Debug.Log(rb.velocity = new Vector2(trackX - playerX, 0).normalized * switchSpeed);
+
+            // Calculate the vector
+            Vector2 direction = new Vector2(trackX - playerX, 0);
+
+            // Normalize the vector
+            Vector2 normalizedVector = direction.normalized;
+            Debug.Log("Norm: " + normalizedVector);
+
+            Vector2 mover = new Vector2(normalizedVector.x * switchSpeed, 0);
+
+            player.transform.Translate(mover * Time.deltaTime);
+            
+            if(playerX >= trackX - switchSpeed * Time.deltaTime && playerX <= trackX + switchSpeed * Time.deltaTime)
+            {
+                player.transform.position = new Vector2(currentTrack.transform.position.x, player.transform.position.y);
+            }
+        }
+
     }
 }
