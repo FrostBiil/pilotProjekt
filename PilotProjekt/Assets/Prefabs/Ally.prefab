@@ -9,8 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 566411693541618562}
-  - component: {fileID: 4687804921696379945}
   - component: {fileID: -7351838434326638008}
+  - component: {fileID: 8870459224258493571}
   m_Layer: 0
   m_Name: Ally
   m_TagString: Enemy
@@ -34,7 +34,22 @@ Transform:
   - {fileID: 3222411999984481475}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!58 &4687804921696379945
+--- !u!114 &-7351838434326638008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 791707934998201039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f773d1fcae79e70468b82ecf46f96a24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fallSpeed: 1
+  playerTag: Player
+  pm: {fileID: 9119106027036012369, guid: ac04301ff2b59fb4a82af4856369f840, type: 3}
+--- !u!58 &8870459224258493571
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -69,21 +84,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 4
---- !u!114 &-7351838434326638008
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 791707934998201039}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f773d1fcae79e70468b82ecf46f96a24, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fallSpeed: 1
-  playerTag: Player
-  pm: {fileID: 9119106027036012369, guid: ac04301ff2b59fb4a82af4856369f840, type: 3}
 --- !u!1 &1294569093554562397
 GameObject:
   m_ObjectHideFlags: 0
