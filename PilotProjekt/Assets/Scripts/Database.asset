@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c493adc0d26c54a48aa99d46c4e50d6b, type: 3}
+  m_Name: Database
+  m_EditorClassIdentifier: 
+  objectsData:
+  - <Name>k__BackingField: Ally
+    <ID>k__BackingField: 0
+    <Prefab>k__BackingField: {fileID: 791707934998201039, guid: 5baed2e016ab11142a4c15ac19537fec, type: 3}
+  - <Name>k__BackingField: DropZone
+    <ID>k__BackingField: 1
+    <Prefab>k__BackingField: {fileID: 8016516377111946719, guid: 270f6597ab760f34385e06cea4d2078c, type: 3}
+  - <Name>k__BackingField: Enemy
+    <ID>k__BackingField: 2
+    <Prefab>k__BackingField: {fileID: 2072175588825020786, guid: 3037a22e301486d4daff6d01841eb914, type: 3}
+  - <Name>k__BackingField: Rations
+    <ID>k__BackingField: 3
+    <Prefab>k__BackingField: {fileID: 9088702425934195308, guid: 1973e3976b70ed141ae9f8f7765a043a, type: 3}
+  - <Name>k__BackingField: Water
+    <ID>k__BackingField: 4
+    <Prefab>k__BackingField: {fileID: 751975824276078043, guid: b2a4e7dd6af912a43a0ed8318b9e23f5, type: 3}
