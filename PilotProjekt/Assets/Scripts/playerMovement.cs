@@ -3,9 +3,7 @@ using UnityEngine;
 public class playerMovement : MonoBehaviour
 {
     public float moveSpeed = 5.0f; // Adjust the speed as needed
-    private Vector3 targetPosition = Vector3.zero;
-
-    private bool moveEnabled = false;
+    private Vector3 targetPosition = new Vector3(0, -4f, 0);
 
     private Vector2 touchStartPos;
     private Vector2 touchEndPos;

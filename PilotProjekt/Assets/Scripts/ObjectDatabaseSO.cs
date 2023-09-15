@@ -18,4 +18,7 @@ public class ObjectData
     public int ID { get; private set; }
     [field: SerializeField]
     public GameObject Prefab { get; private set; }
+
+    [field: SerializeField]
+    public Vector3 Position { get; private set; }
 }
