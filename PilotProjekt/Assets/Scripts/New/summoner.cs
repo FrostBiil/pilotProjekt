@@ -6,11 +6,12 @@ public class summoner : MonoBehaviour
 {
     public float
         lastSummonTime = 0,
-        summonRate = Random.Range(1, 5);
+        summonRate;
     
     void Awake()
     {
         lastSummonTime = Time.time;
+        summonRate = Random.Range(0, 5);
     }
 
 

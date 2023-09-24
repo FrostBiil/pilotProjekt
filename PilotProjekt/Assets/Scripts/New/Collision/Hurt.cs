@@ -16,5 +16,6 @@ public class Hurt : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         Debug.Log("Lost Game");
+        Destroy(gameObject);
     }
 }

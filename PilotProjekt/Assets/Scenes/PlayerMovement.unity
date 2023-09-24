@@ -343,7 +343,7 @@ Transform:
   m_GameObject: {fileID: 884879290}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 1451.06, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -364,11 +364,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acbf43a82a24d5e4eb637745faeee11a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  allyObject: {fileID: 0}
-  zoneObject: {fileID: 0}
-  enemyObject: {fileID: 0}
-  rationObject: {fileID: 0}
-  waterObject: {fileID: 0}
+  allyObject: {fileID: 7871769112292701103, guid: f139f5ff7acfdba44944fc63fb15d164, type: 3}
+  zoneObject: {fileID: 5360583832156262385, guid: cba2fc72ff8e4f24083ace83cd99426a, type: 3}
+  enemyObject: {fileID: 6152939714084834465, guid: 1731a72630978c74ebb66fe6a1b3253e, type: 3}
+  rationObject: {fileID: 3246880952147365665, guid: b173fd9252a9164468e9efdebd15f5cf, type: 3}
+  waterObject: {fileID: 3601758616511911907, guid: 9f1de98b68a2841478d20cadb2ade963, type: 3}
   tracks: []
 --- !u!1 &1065009384
 GameObject:
@@ -643,6 +643,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1065009388}
     m_Modifications:
+    - target: {fileID: 1412954365454305984, guid: 695ae6580f2793740bda563eaa04991c, type: 3}
+      propertyPath: m_Radius
+      value: 36.53
+      objectReference: {fileID: 0}
+    - target: {fileID: 1412954365454305984, guid: 695ae6580f2793740bda563eaa04991c, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2036194549029106642, guid: 695ae6580f2793740bda563eaa04991c, type: 3}
       propertyPath: m_Name
       value: Player

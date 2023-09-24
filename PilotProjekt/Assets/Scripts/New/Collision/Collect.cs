@@ -17,5 +17,6 @@ public class Collect : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         pM.add(value);
+        Destroy(gameObject);
     }
 }

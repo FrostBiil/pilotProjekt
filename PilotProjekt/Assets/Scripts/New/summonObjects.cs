@@ -6,31 +6,25 @@ public class summonObjects : MonoBehaviour
 {
     private float summonRate = 5f;
     private float lastSummonTime = 0f;
-    private int RandWeight(float[] weights)
+    private int RandWeight(List<float> weights)
     {
         // Get the total sum of all the weights.
         float weightSum = 0f;
-        for (int i = 0; i < weights.Length; ++i)
+        for (int i = 0; i < weights.Count; ++i)
         {
             weightSum += weights[i];
         }
 
-        // Step through all the possibilities, one by one, checking to see if each one is selected.
+
+        float randomValue = Random.Range(0, weightSum);
+
         int index = 0;
-        int lastIndex = weights.Length - 1;
-        while (index < lastIndex)
+        float tmpSum = 0f;
+        while (!(tmpSum <= randomValue && (tmpSum + weights[index]) >= randomValue))
         {
-            // Do a probability check with a likelihood of weights[index] / weightSum.
-            if (Random.Range(0, weightSum) < weights[index])
-            {
-                return index;
-            }
-
-            // Remove the last item from the sum of total untested weights and try again.
-            weightSum -= weights[index++];
+            index++;
+            tmpSum += weights[index];
         }
-
-        // No other item was selected, so return very last index.
         return index;
     }
 
@@ -53,6 +47,12 @@ public class summonObjects : MonoBehaviour
         waterWeight = 1f;
 
     public List<GameObject> tracks = new List<GameObject>();
+
+    private GameObject chosenObject()
+    {
+        int i = RandWeight(weights);
+        return objects[i];
+    }
 
     private void Awake()
     {
@@ -90,17 +90,9 @@ public class summonObjects : MonoBehaviour
             summoner s = track.GetComponent<summoner>();
             if (s.lastSummonTime + s.summonRate <= Time.time)
             {
-                s.Summon(chooseObject());
+                s.Summon(chosenObject());
             }
         }
     }
-
-    private void chooseObject()
-    {
-        int i = RandWeight(weights);
-
-        return objects[i];
-    }
-
 }
 
