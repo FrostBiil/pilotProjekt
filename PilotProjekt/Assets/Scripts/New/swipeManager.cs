@@ -10,7 +10,7 @@ public class swipeManager : MonoBehaviour
     
     private int trackNumber;
 
-    private float switchSpeed = 1000.0f;
+    private float switchSpeed = 2000.0f;
 
     public int TrackNumber
     {

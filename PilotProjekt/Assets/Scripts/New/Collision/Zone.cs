@@ -1,0 +1,20 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Zone : MonoBehaviour
+{
+    private GameObject pMO;
+    private pointManager pM;
+
+    void Awake()
+    {
+        pMO = GameObject.Find("Point Manager");
+        pM = pMO.GetComponent<pointManager>();
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        pM.savePoints();
+    }
+}

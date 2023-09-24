@@ -9,7 +9,7 @@ public class pointManager : MonoBehaviour
     public int safePoints = 0;
 
 
-    public void add(int point)
+    public void add(int point = 1)
     {
         storedPoints += point;
     }
